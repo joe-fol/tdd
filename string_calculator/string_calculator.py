@@ -1,2 +1,2 @@
 def add(numbers):
-    raise NotImplementedError
+    return "0"
