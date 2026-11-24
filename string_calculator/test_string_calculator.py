@@ -1,9 +1,9 @@
-import unittest
+import pytest
 
 from string_calculator import add
 
 
-class TestAdd(unittest.TestCase):
+class TestAdd:
     def test_empty_string_returns_0(self):
         assert add("") == "0"
 
@@ -13,9 +13,11 @@ class TestAdd(unittest.TestCase):
     def test_given_3_returns_3(self):
         assert add("3") == "3"
 
-    def test_can_add_two_numbers(self):
-        assert add("1,1") == "2"
-
-
-if __name__ == "__main__":
-    unittest.main()
+    @pytest.mark.parametrize(
+        "numbers,expected",
+        [
+            ("1,1", "2"),
+        ]
+    )
+    def test_can_add_two_numbers(self, numbers, expected):
+        assert add(numbers) == expected
