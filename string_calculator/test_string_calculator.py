@@ -22,3 +22,7 @@ class TestAdd:
     )
     def test_can_add_numbers_from_string(self, numbers, expected):
         assert add(numbers) == expected
+
+    # Todo: Joe to make this pass
+    def test_can_handle_new_line_as_separator(self):
+        assert add("1\n2,3") == "6"
