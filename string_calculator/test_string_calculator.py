@@ -17,9 +17,8 @@ class TestAdd:
         "numbers,expected",
         [
             ("1,1", "2"),
-            # Todo Joe to make this pass...
             ("2,3", "5"),
-        ]
+        ],
     )
     def test_can_add_two_numbers(self, numbers, expected):
         assert add(numbers) == expected
