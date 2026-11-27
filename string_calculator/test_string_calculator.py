@@ -20,7 +20,9 @@ class TestAdd:
             ("2,3", "5"),
             ("1.1, 1.4", "2.5"),
             ("1.1, 1.2", "2.3"),
+            ("1,2,3,4,5", "15"),
+            ("1,2.37,3,4.29,5", "15.66"),
         ],
     )
-    def test_can_add_two_numbers(self, numbers, expected):
+    def test_can_add_numbers_from_string(self, numbers, expected):
         assert add(numbers) == expected
