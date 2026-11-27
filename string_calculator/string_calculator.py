@@ -4,5 +4,5 @@ def add(numbers):
     if numbers == "":
         return "0"
 
-    split_numbers = list(map(float, numbers.split(",")))
-    return str(Decimal(sum(split_numbers)).normalize())
+    split_numbers = [Decimal(number) for number in numbers.split(",")]
+    return str(sum(split_numbers))
