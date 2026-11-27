@@ -15,7 +15,11 @@ class TestAdd:
 
     @pytest.mark.parametrize(
         "numbers,expected",
-        [("1,1", "2"), ("2,3", "5"), ("1.1, 1.4", "2.5")],
+        [
+            ("1,1", "2"),
+            ("2,3", "5"),
+            ("1.1, 1.4", "2.5")
+        ],
     )
     def test_can_add_two_numbers(self, numbers, expected):
         assert add(numbers) == expected
