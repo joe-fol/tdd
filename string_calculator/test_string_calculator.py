@@ -18,7 +18,8 @@ class TestAdd:
         [
             ("1,1", "2"),
             ("2,3", "5"),
-            ("1.1, 1.4", "2.5")
+            ("1.1, 1.4", "2.5"),
+            ("1.1, 1.2", "2.3"),
         ],
     )
     def test_can_add_two_numbers(self, numbers, expected):
